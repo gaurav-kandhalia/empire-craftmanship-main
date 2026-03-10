@@ -4,19 +4,46 @@ import CTASection from "@/components/home/CTASection";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import stairsImg from "@/assets/stairs-service.jpg";
+import GalleryGrid from "@/components/GalleryGrid";
+import { useNavigate } from "react-router-dom";
 
-const features = [
-  "Custom Staircase Design",
-  "Wood, Glass & Metal Railings",
-  "Floating Staircases",
-  "Spiral Staircase Installation",
-  "Balustrade & Handrail Systems",
-  "Staircase Renovation & Refinishing",
-  "3D Staircase Visualization",
-  "Code-Compliant Construction",
+const staircaseGalleryItems = [
+  {
+    title: "Custom Staircase Design",
+    type: "image",
+    src: "https://graciamakeovers.com/wp-content/uploads/2025/10/IMG_8925-2-scaled.webp",
+    link: "/stairs/custom-design",
+  },
+  {
+    title: "Wood, Glass & Metal Railings",
+    type: "image",
+    src: "https://graciamakeovers.com/wp-content/uploads/2025/10/IMG_8924-2-scaled.webp",
+    link: "/stairs/railings",
+  },
+  {
+    title: "Floating Staircases",
+    type: "image",
+    src: "https://graciamakeovers.com/wp-content/uploads/2025/10/PHOTO-2023-05-16-19-10-22-101-2.webp",
+    link: "/stairs/floating-stairs",
+  },
+  {
+    title: "Spiral Staircase Installation",
+    type: "image",
+    src: "https://graciamakeovers.com/wp-content/uploads/2025/10/IMG_8789-2-scaled.webp",
+    link: "/stairs/spiral-staircase",
+  },
+  {
+    title: "Balustrade & Handrail Systems",
+    type: "image",
+    src: "https://graciamakeovers.com/wp-content/uploads/2025/10/IMG_8792-2-scaled.webp",
+    link: "/stairs/balustrade-handrail",
+  },
 ];
 
 const ServiceStairs = () => {
+
+    const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen">
       <Header />
@@ -40,29 +67,9 @@ const ServiceStairs = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-              <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <img src={stairsImg} alt="Custom staircase installation" className="rounded-lg w-full" />
-              </motion.div>
-              <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-                <h2 className="text-3xl font-heading font-bold text-foreground mb-6">What We Offer</h2>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Whether you're building new or renovating, our staircase solutions range from classic wooden designs to modern floating stairs with glass railings — all built to code and designed to impress.
-                </p>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {features.map((f) => (
-                    <div key={f} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-gold shrink-0" />
-                      <span className="text-sm text-foreground">{f}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
+      {/* --------------gallery grid-------------- */}
+     <GalleryGrid items={staircaseGalleryItems} onItemClick={(item:any) => navigate(item.link)}/>
+        
 
         <CTASection />
       </main>
@@ -72,3 +79,6 @@ const ServiceStairs = () => {
 };
 
 export default ServiceStairs;
+
+
+

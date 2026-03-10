@@ -21,6 +21,7 @@ import BackToTop from "./components/BackToTop";
 import ScrollProgress from "./components/ScrollProgress";
 import WhatsAppWidget from "./components/WhatsAppWidget";
 import KitchenDetail from "./pages/KitchenDetail";
+import StairsDetail from "./pages/StairsDetail"
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const AppRoutes = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/kitchen/:slug" element={<KitchenDetail/>}/>
+          <Route path="/stairs/:slug" element={<StairsDetail/>}/>
         </Routes>
       </motion.div>
     </AnimatePresence>

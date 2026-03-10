@@ -39,7 +39,7 @@ const HeroSection = ({ title, description, image, label = "Portfolio" }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="text-warm-white/70 text-lg md:text-xl leading-relaxed max-w-2xl"
+                className="text-warm-white/70 text-lg md:text-xl leading-relaxed max-w-2xl font-body"
               >
                 {description}
               </motion.p>
@@ -58,7 +58,7 @@ const HeroSection = ({ title, description, image, label = "Portfolio" }) => {
               <img
                 src={image}
                 alt={title}
-                className="rounded-xl shadow-2xl object-cover w-full h-[420px]"
+                className="rounded-xl  object-cover w-full h-[420px]"
               />
             </motion.div>
           )}

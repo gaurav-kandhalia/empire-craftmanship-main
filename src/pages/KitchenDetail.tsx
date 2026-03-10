@@ -27,7 +27,7 @@ const KitchenDetail = () => {
   label="Kitchen Portfolio"
   title={data.title}
   description={data.description}
-  image={"/kitchen/images/modernKitchen/modern-kitchen6.png"}
+  image={"/staircase/images/stairs.png"}
 />
 
             {/* DESCRIPTION CARD */}
@@ -70,80 +70,3 @@ const KitchenDetail = () => {
 
 export default KitchenDetail;
 
-    //  <section className="pt-32 pb-24 bg-charcoal relative overflow-hidden">
-
-    //             {/* Background Image */}
-    //             <motion.div
-    //                 initial={{ scale: 1.1 }}
-    //                 animate={{ scale: 1 }}
-    //                 transition={{ duration: 6, ease: "easeOut" }}
-    //                 className="absolute inset-0 opacity-20"
-    //             >
-    //                 <img
-    //                     src={kitchenImg}
-    //                     alt="Kitchen background"
-    //                     className="w-full h-full object-cover"
-    //                 />
-    //             </motion.div>
-
-    //             {/* Dark overlay */}
-    //             <div className="absolute inset-0 bg-charcoal/80" />
-
-    //             {/* Floating glow */}
-    //             <motion.div
-    //                 animate={{ y: [0, -25, 0] }}
-    //                 transition={{ duration: 8, repeat: Infinity }}
-    //                 className="absolute right-[-150px] top-[-150px] w-[400px] h-[400px] bg-gold/10 blur-3xl rounded-full"
-    //             />
-
-    //             <div className="container mx-auto px-4 lg:px-8 relative">
-
-    //                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-    //                     {/* LEFT SIDE TEXT */}
-    //                     <motion.div
-    //                         initial={{ opacity: 0, y: 40 }}
-    //                         animate={{ opacity: 1, y: 0 }}
-    //                         transition={{ duration: 0.8 }}
-    //                         className="max-w-3xl"
-    //                     >
-
-    //                         <span className="font-heading text-xs uppercase text-gold tracking-[0.4em]">
-    //                             Kitchen Portfolio
-    //                         </span>
-
-    //                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-warm-white mt-4 mb-6 leading-tight">
-    //                             {data.title}
-    //                         </h1>
-
-    //                         <motion.p
-    //                             initial={{ opacity: 0 }}
-    //                             animate={{ opacity: 1 }}
-    //                             transition={{ delay: 0.3 }}
-    //                             className="text-warm-white/70 text-lg md:text-xl leading-relaxed max-w-2xl"
-    //                         >
-    //                             {data.description}
-    //                         </motion.p>
-
-    //                     </motion.div>
-
-    //                     {/* RIGHT SIDE IMAGE */}
-
-    //                     <motion.div
-    //                         initial={{ opacity: 0, x: 80 }}
-    //                         animate={{ opacity: 1, x: 0 }}
-    //                         transition={{ duration: 0.8 }}
-    //                         className="relative"
-    //                     >
-    //                         <img
-    //                             src={'/kitchen/images/modernKitchen/modern-kitchen6.png'}
-    //                             alt={data.title}
-    //                             className="rounded-xl  object-cover w-full h-[420px] "
-    //                         />
-    //                     </motion.div>
-
-    //                 </div>
-
-    //             </div>
-
-    //         </section>
