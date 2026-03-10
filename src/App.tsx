@@ -20,6 +20,7 @@ import StickyMobileCTA from "./components/StickyMobileCTA";
 import BackToTop from "./components/BackToTop";
 import ScrollProgress from "./components/ScrollProgress";
 import WhatsAppWidget from "./components/WhatsAppWidget";
+import KitchenDetail from "./pages/KitchenDetail";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +64,7 @@ const AppRoutes = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/kitchen/:slug" element={<KitchenDetail/>}/>
         </Routes>
       </motion.div>
     </AnimatePresence>
